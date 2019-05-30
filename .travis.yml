@@ -8,7 +8,7 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install bison flex; fi
 
 install:
-- cpanm --no-test --quiet  Bundle::LWP
+- cpanm --notest --quiet  Bundle::LWP
 
 script:
 - wget https://buildfarm.postgresql.org/downloads/latest-client.tgz
