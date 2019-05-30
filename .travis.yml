@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 os: macos
 osx_image: xcode10.2
 compiler:clang
@@ -11,3 +11,4 @@ script:
 - tar -xzvf latest-client.tgz
 - cd build-farm-10
 - ./run_build.pl
+
