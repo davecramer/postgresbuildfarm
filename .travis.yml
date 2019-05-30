@@ -7,8 +7,8 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update          ; fi
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install bison flex; fi
 
-install
-- which perl:
+install:
+- which perl
 - cpanm  Bundle::LWP
 
 script:
