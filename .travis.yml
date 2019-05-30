@@ -1,7 +1,7 @@
 sudo: true 
 os: macos
 osx_image: xcode10.2
-language: perl
+
 compiler: clang
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update          ; fi
