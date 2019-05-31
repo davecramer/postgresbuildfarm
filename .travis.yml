@@ -13,4 +13,4 @@ install:
 script:
 - wget https://buildfarm.postgresql.org/downloads/latest-client.tgz
 - tar -xzvf latest-client.tgz
-- perl ./build-farm-10/run_build.pl --nosend --nostatus --verbose=2
+- perl ./build-farm-10/run_build.pl --nosend --nostatus --verbose
