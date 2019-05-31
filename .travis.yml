@@ -1,18 +1,16 @@
 sudo: true 
 os: osx
 osx_image: xcode10.2
-language: perl
+language: C
 compiler: clang
 env:
  - PG_TEST_EXTRA=kerberos
 before_install:
-  - wget https://storage.googleapis.com/travis-ci-language-archives/perl/binaries/osx/10.14/x86_64/perl-5.14.tar.bz2
-  -  sudo tar -xjf perl-5.14.tar.bz2 --directory /
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update          ; fi
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install bison flex; fi
 
 install:
-- cpanm --notest --quiet  Bundle::LWP IPC::Run
+- yes | sudo perl -MCPAN -e 'install DBI'
 
 script:
 - echo $TRAVIS_OS_NAME
