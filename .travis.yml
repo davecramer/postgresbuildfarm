@@ -1,5 +1,5 @@
 sudo: true 
-os: macos
+os: osx
 osx_image: xcode10.2
 language: perl
 compiler: clang
@@ -13,6 +13,7 @@ install:
 - cpanm --notest --quiet  Bundle::LWP IPC::Run
 
 script:
+- echo $TRAVIS_OS_NAME
 - gcc --version
 - wget https://buildfarm.postgresql.org/downloads/latest-client.tgz
 - tar -xzvf latest-client.tgz
