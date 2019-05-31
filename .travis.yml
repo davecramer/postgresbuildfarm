@@ -3,6 +3,8 @@ os: macos
 osx_image: xcode10.2
 language: perl
 compiler: clang
+env:
+ - PG_TEST_EXTRA=kerberos
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update          ; fi
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install bison flex; fi
